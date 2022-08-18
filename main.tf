@@ -11,7 +11,7 @@ resource "azurerm_managed_disk" "source" {
   }
 }
 
-resource "azurerm_managed_disk_copy" "copy" {
+resource "azurerm_managed_disk" "copy" {
   name                 = var.copy_name
   location             = var.location
   resource_group_name  = var.resource_group_name
