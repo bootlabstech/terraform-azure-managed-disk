@@ -15,5 +15,5 @@ variable "source_name" {
 
 variable "copy_name" {
   type        = string
-  description = "name of the azurerm_managed_disk_copy"
+  description = "name of the azurerm_managed_disk"
 }
