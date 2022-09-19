@@ -27,3 +27,8 @@ variable "disk_size_gb" {
   type        = string
   description = "Required for a new managed disk) Specifies the size of the managed disk to create in gigabytes"
 }
+
+variable "source_name" {
+  type        = string
+  description = "The name of the disk"
+}
