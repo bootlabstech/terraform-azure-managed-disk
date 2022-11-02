@@ -8,19 +8,15 @@ variable "location" {
   description = "location of the resource group"
 }
 
-variable "copy_name" {
-  type        = string
-  description = "name of the azurerm_managed_disk"
-}
-
 variable "storage_account_type" {
   type        = string
-  description = "The type of storage to use for the managed disk."
+  description = "The type of storage to use for the managed disk. Possible values are Standard_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS, StandardSSD_LRS or UltraSSD_LRS."
 }
 
 variable "create_option" {
   type        = string
-  description = " The method to use when creating the managed disk"
+  description = "The method to use when creating the managed disk"
+  default     = "Empty"
 }
 
 variable "disk_size_gb" {
@@ -28,7 +24,7 @@ variable "disk_size_gb" {
   description = "Required for a new managed disk) Specifies the size of the managed disk to create in gigabytes"
 }
 
-variable "source_name" {
+variable "name" {
   type        = string
   description = "The name of the disk"
 }
