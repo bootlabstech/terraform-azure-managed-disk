@@ -28,3 +28,8 @@ variable "name" {
   type        = string
   description = "The name of the disk"
 }
+
+variable "virtual_machine_id" {
+  type = string
+  description = "The self link of vm"
+}

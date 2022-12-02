@@ -1,4 +1,4 @@
-resource "azurerm_managed_disk" "Disk" {
+resource "azurerm_managed_disk" "disk" {
   name                 = var.name
   location             = var.location
   resource_group_name  = var.resource_group_name
@@ -7,3 +7,9 @@ resource "azurerm_managed_disk" "Disk" {
   disk_size_gb         = var.disk_size_gb
 }
 
+resource "azurerm_virtual_machine_data_disk_attachment" "disk_attachment" {
+  managed_disk_id    = azurerm_managed_disk.disk.id
+  virtual_machine_id = var.virtual_machine_id
+  lun                = "10"
+  caching            = "ReadWrite"
+}
