@@ -1,3 +1,4 @@
+#DISK 
 variable "resource_group_name" {
   type        = string
   description = "name of the resource group"
@@ -27,7 +28,7 @@ variable "disk_size_gb" {
   type        = string
   description = "Required for a new managed disk) Specifies the size of the managed disk to create in gigabytes"
 }
-
+# Attachment
 variable "virtual_machine_id" {
   type = string
   description = "The self link of vm"

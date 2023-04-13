@@ -1,3 +1,4 @@
+# Creates Additional managed disk
 resource "azurerm_managed_disk" "disk" {
   name                 = var.name
   location             = var.location
@@ -6,7 +7,7 @@ resource "azurerm_managed_disk" "disk" {
   create_option        = var.create_option
   disk_size_gb         = var.disk_size_gb
 }
-
+# Attaches disk to VM
 resource "azurerm_virtual_machine_data_disk_attachment" "disk_attachment" {
   managed_disk_id    = azurerm_managed_disk.disk.id
   virtual_machine_id = var.virtual_machine_id
